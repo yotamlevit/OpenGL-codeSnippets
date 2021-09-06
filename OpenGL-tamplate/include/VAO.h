@@ -7,12 +7,13 @@
 class VAO
 {
 public:
-
+	// ID refrence for the Vertex Array Object
 	GLuint ID;
-
+	// Constractor that generates a VAO ID
 	VAO();
 
-	void LinkVBO(VBO VBO, GLuint layout);
+	// Links a VBO Attribute to the VAO usingg a certin latout
+	void LinkAttrib(VBO VBO, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, void* offset);
 	// Binds the VAO
 	void Bind();
 	// Unbinds the VAO
